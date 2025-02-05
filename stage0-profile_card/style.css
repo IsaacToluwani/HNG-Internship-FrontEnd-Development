@@ -95,11 +95,11 @@ body {
   margin: 20px;
 }
 
-
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
   .main-card {
-    width: 100%;
+    width: 80%;
+    height: 90%;
     padding: 10px;
   }
 
@@ -107,6 +107,17 @@ body {
     font-size: 14px;
   }
 
+  .card-img {
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+  }
+  .card-img img {
+    height: auto;
+    width: 100%;
+    object-fit: auto;
+    align-self: center;
+  }
   .sm-link i {
     font-size: 20px;
   }
