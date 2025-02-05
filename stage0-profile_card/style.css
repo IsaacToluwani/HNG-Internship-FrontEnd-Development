@@ -94,3 +94,35 @@ body {
 .utc-time {
   margin: 20px;
 }
+
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .main-card {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .card-data p {
+    font-size: 14px;
+  }
+
+  .sm-link i {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-card {
+    width: 100%;
+    padding: 5px;
+  }
+
+  .card-data p {
+    font-size: 12px;
+  }
+
+  .sm-link i {
+    font-size: 18px;
+  }
+}
