@@ -1,0 +1,38 @@
+@import url(https://db.onlinewebfonts.com/c/12e32253f0e25760bf6938c3b941ab8f?family=Tarocco+OT+W01+Bold);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  align-items: center;
+  height: 100vh;
+  font-family: 'Tarocco OT W01 Bold';
+}
+
+.main-card {
+  width: 400px;
+  height: 600px;
+  /* height: 80px; */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: silver;
+}
+
+.card-img {
+  height: 50%;
+  overflow: hidden;
+}
+
+.card-img img {
+  height: auto;
+  width: 100%;
+  object-fit: contain;
+}
