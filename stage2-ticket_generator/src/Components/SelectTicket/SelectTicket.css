@@ -2,16 +2,262 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
 
-
 .container {
   display: flex;
-width: 700px;
-padding: 48px;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-gap: 32px;
-border-radius: 40px;
-border: 1px solid #0E464F;
-background: #041E23;
+  width: 700px;
+  padding: 48px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 32px;
+  border-radius: 40px;
+  border: 1px solid #0e464f;
+  background: #041e23;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: white;
+}
+
+button {
+  cursor: pointer;
+}
+.heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.heading h2 {
+  color: #fff;
+  font-family: JejuMyeongjo;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.heading p {
+  color: var(--color-grey-98, #fafafa);
+
+  /* Text/Regular/Normal */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.ticket-container {
+  display: flex;
+  padding: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 32px;
+  align-self: stretch;
+
+  border-radius: 32px;
+  border: 1px solid #0e464f;
+  background: #08252b;
+}
+
+.banner {
+  display: flex;
+  height: 200px;
+  padding: 24px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+
+  border-radius: 24px;
+  border-right: 2px solid #07373f;
+  border-bottom: 2px solid #07373f;
+  border-left: 2px solid #07373f;
+  background: radial-gradient(
+      57.42% 106.59% at 14.02% 32.06%,
+      rgba(36, 160, 181, 0.2) 0%,
+      rgba(36, 160, 181, 0) 100%
+    ),
+    rgba(10, 12, 17, 0.1);
+  backdrop-filter: blur(7px);
+}
+
+.banner h1 {
+  align-self: stretch;
+
+  color: var(--color-grey-98, #fafafa);
+  text-align: center;
+  font-family: 'Road Rage';
+  font-size: 62px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 100%; /* 62px */
+}
+
+.banner p {
+  width: 340px;
+
+  color: var(--color-grey-98, #fafafa);
+  text-align: center;
+
+  /* Text/Regular/Normal */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 70%;
+  gap: 05px;
+  white-space: nowrap;
+}
+
+.ticket-container hr {
+  height: 4px;
+  align-self: stretch;
+  background: #07373f;
+}
+
+.ticket-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 16px;
+}
+
+.ticket-type h4 {
+  align-self: flex-start;
+  color: var(--color-grey-98, #fafafa);
+
+  /* Text/Regular/Normal */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.btn-container {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  align-self: stretch;
+
+  border-radius: 24px;
+  border: 1px solid #07373f;
+  background: #052228;
+}
+
+.type-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  row-gap: 24px;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.type-buttons button {
+  display: flex;
+  width: 158px;
+  height: 110px;
+  padding: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  border-radius: var(--Radius-reg-2, 12px);
+  border: 1px solid #197686;
+  background: transparent;
+}
+
+.type-buttons button:hover {
+  background: #12464e;
+}
+
+.type-buttons button:active {
+  background: #12464e;
+}
+.no-ticket {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.no-ticket h4 {
+  color: var(--color-grey-98, #fafafa);
+  align-self: flex-start;
+  /* Text/Regular/Normal */
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 24px */
+}
+
+.ticket-no-select {
+  display: flex;
+  padding: var(--Radius-reg-2, 12px);
+  align-items: center;
+  gap: var(--Radius-reg, 8px);
+  align-self: stretch;
+  border-radius: var(--Radius-reg-2, 12px);
+  border: 1px solid #07373f;
+  width: 100%;
+}
+
+.no-ticket select {
+  width: 100%;
+  border: 1px solid #07373f;
+  background: transparent;
+  color: white;
+  border-radius: var(--Radius-reg-2, 12px);
+  border: 1px solid #07373f;
+}
+
+.no-ticket option {
+  background: transparent;
+}
+
+.form-submit-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  gap: 20px;
+}
+.form-submit-btn button {
+  display: flex;
+  padding: var(--Radius-reg-2, 12px) var(--Radius-semi, 24px);
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  border-radius: var(--Radius-reg, 8px);
+  border: 1px solid #24a0b5;
+  color: white
+}
+
+.cancel-btn  {
+  background: transparent;
+}
+
+.next-btn {
+  background: #24A0B5;
+  cursor: pointer;
 }
