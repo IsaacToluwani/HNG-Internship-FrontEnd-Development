@@ -1,5 +1,5 @@
 {
-  "name": "stage2-conference_ticket_generator",
+  "name": "stage2-ticket_generator",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
