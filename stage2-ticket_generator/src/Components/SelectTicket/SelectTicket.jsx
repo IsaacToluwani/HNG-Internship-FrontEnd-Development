@@ -1,7 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './SelectTicket.css';
 
 function SelectTicket() {
+  const [ticketQuantity, setTicketQuantity] = useState('1');
+  const [ticketType, setTicketType] = useState('');
+
+  // Load data from local storage when the component mounts
+  useEffect(() => {
+    const savedTicketQuantity = localStorage.getItem('ticketQuantity');
+    const savedTicketType = localStorage.getItem('ticketType');
+    if (savedTicketQuantity) {
+      setTicketQuantity(savedTicketQuantity);
+    }
+    if (savedTicketType) {
+      setTicketType(savedTicketType);
+    }
+  }, []);
+
+  // Save data to local storage whenever it changes
+  useEffect(() => {
+    localStorage.setItem('ticketQuantity', ticketQuantity);
+    localStorage.setItem('ticketType', ticketType);
+  }, [ticketQuantity, ticketType]);
+
   return (
     <main className='container'>
       <div className='heading'>
@@ -28,21 +49,36 @@ function SelectTicket() {
           <h4>Select Ticket Type</h4>
           <div className='btn-container'>
             <div className='type-buttons'>
-              <button className='button-one btn' aria-label="Select Free Ticket">
+              <button
+                className={`button-one btn ${ticketType === 'free' ? 'selected' : ''}`}
+                aria-label="Select Free Ticket"
+                type="button"
+                onClick={() => setTicketType('free')}
+              >
                 <div className=''>
                   <h5>Free</h5>
                   <p>REGULAR ACCESS</p>
                   <p>20/52</p>
                 </div>
               </button>
-              <button className='button-two btn' aria-label="Select VIP Ticket">
+              <button
+                className={`button-two btn ${ticketType === 'vip' ? 'selected' : ''}`}
+                aria-label="Select VIP Ticket"
+                type="button"
+                onClick={() => setTicketType('vip')}
+              >
                 <div className=' '>
                   <h5>$150</h5>
                   <p>VIP ACCESS</p>
                   <p>20/52</p>
                 </div>
               </button>
-              <button className='button-three btn' aria-label="Select VVIP Ticket">
+              <button
+                className={`button-three btn ${ticketType === 'vvip' ? 'selected' : ''}`}
+                aria-label="Select VVIP Ticket"
+                type="button"
+                onClick={() => setTicketType('vvip')}
+              >
                 <div className=''>
                   <h5>$150</h5>
                   <p>VVIP ACCESS</p>
@@ -54,8 +90,14 @@ function SelectTicket() {
         </div>
         <div className='no-ticket'>
           <h4>Number of Tickets</h4>
-          {/* <label htmlFor="ticket-quantity" className="sr-only">Select the number of tickets</label> */}
-          <select name='ticket-quantity' id='ticket-quantity' aria-required="true">
+          <label htmlFor="ticket-quantity" className="sr-only">Select the number of tickets</label>
+          <select
+            name='ticket-quantity'
+            id='ticket-quantity'
+            aria-required="true"
+            value={ticketQuantity}
+            onChange={(e) => setTicketQuantity(e.target.value)}
+          >
             <option value='1'>1</option>
             <option value='2'>2</option>
             <option value='3'>3</option>
